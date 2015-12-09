@@ -5,7 +5,7 @@ Recreating instabug theming issue when dexguard obfuscation is turned on
 Please feel free to find the key specified in `gradle.properties` and replace it as I'm yet to master how to independently distribute the signing configuration.
 
 #Dexguard
-I did not include the library in the public repo.It's should be located in the project root directory named`/dexguard/dexguard-7.0.24/`
+I did not include the library in the public repo. It should be located in the project root directory named`/dexguard/dexguard-7.0.24/`
 
 #Instabug customization guidelines
 
