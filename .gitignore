@@ -1,0 +1,41 @@
+# Android Studio
+.idea/
+.gradle
+/*/local.properties
+/*/out
+/*/*/build
+/*/*/production
+
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+
+# Ignore gradle files
+build/
+
+
+# dexguard
+dexguard/
+App/dexguard_mapping.txt
+
+# proguard
+App/dump.txt
+App/seeds.txt
+App/usage.txt
+
+
+# generated files
+bin/
+gen/
+
+# Ignore gradle files
+.gradle/
+build/
+
+# Local configuration file (sdk path, etc)
+local.properties

@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+apply plugin: 'dexguard'
+
+buildscript {
+    repositories {
+        flatDir { dirs "${rootDir}/dexguard/dexguard-7.0.24/lib" }
+        jcenter()
+        maven { url 'http://archiva.instabug.com/repository/release' }
+    }
+    dependencies {
+        classpath ':dexguard:'
+    }
+}
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+    signingConfigs {
+        release {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+        }
+    }
+    defaultConfig {
+        applicationId "theme.dexguardwidthinstabug"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            proguardFile getDefaultDexGuardFile('dexguard-release.pro')
+            proguardFile 'dexguard-project.txt'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            applicationIdSuffix '.DEBUG'
+            versionNameSuffix '-DEBUG'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.instabug.library:instabugsupport:1.7.1'
+}
