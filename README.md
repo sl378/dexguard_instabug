@@ -23,7 +23,7 @@ I did not include the library in the public repo.It's should be located in the p
 	Make sure your theme contains the above style definitions.
 
 #Screenshots
-##Debug
-![alt tag](https://github.com/sl378/dexguard_instabug/blob/master/release.png)
 ##Release
-![alt tag](https://github.com/sl378/dexguard_instabug/blob/master/debuge.png)
+![Release](https://github.com/sl378/dexguard_instabug/blob/master/release.png)
+##Debug
+![Debug](https://github.com/sl378/dexguard_instabug/blob/master/debug.png)
