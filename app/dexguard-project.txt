@@ -20,9 +20,8 @@
 # about the processed code.
 #-verbose
 
-# Uncomment and adapt the following lines to access specified classes and
-# class members by means of reflection. For good measure, you can then also
-# encrypt the resulting strings and the classes that contain the invocations.
+-keepresources color/colorPrimary
+-keepresourcexmlattributenames resources/style/item/name
 
 -accessthroughreflection class android.content.pm.PackageManager {
     int checkSignatures(int, int);
